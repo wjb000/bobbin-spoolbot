@@ -1,0 +1,35 @@
+{
+ "clashes": [
+  {
+   "a": "rear_shell",
+   "b": "tail",
+   "mm3": 0.5,
+   "allowed": true
+  },
+  {
+   "a": "wheel_l",
+   "b": "oring_l",
+   "mm3": 15.5,
+   "allowed": true
+  },
+  {
+   "a": "dock",
+   "b": "pogo_l",
+   "mm3": 3.2,
+   "allowed": true
+  },
+  {
+   "a": "dock",
+   "b": "pogo_r",
+   "mm3": 3.2,
+   "allowed": true
+  },
+  {
+   "a": "dock",
+   "b": "dock_usb",
+   "mm3": 15.7,
+   "allowed": true
+  }
+ ],
+ "unexpected": []
+}

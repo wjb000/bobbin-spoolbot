@@ -1,0 +1,77 @@
+{
+ "stability": {
+  "total_mass_g": 243.6,
+  "body_mass_g": 172.5,
+  "com_mm": [
+   -2.6,
+   -0.1,
+   47.4
+  ],
+  "body_com_mm": [
+   -3.7,
+   -0.2,
+   45.2
+  ],
+  "body_com_below_axle_mm": 7.8,
+  "body_com_behind_axle_mm": 3.7,
+  "tail_contact_x_mm": -77.8,
+  "tail_static_load_g": 8.2,
+  "tail_min_z_mm": 0.04,
+  "core_ground_clearance_mm": 9.0
+ },
+ "plastic_grams": {
+  "front_shell": 30.4,
+  "rear_shell": 42.0,
+  "wheel_l": 31.5,
+  "wheel_r": 31.5,
+  "oring_l": 4.0,
+  "oring_r": 4.0,
+  "lens": 1.9,
+  "tail": 5.2,
+  "dock": 38.7
+ },
+ "overall_mm_xyz": [
+  141.6,
+  102.0,
+  106.0
+ ],
+ "mass_g": {
+  "front_shell": 30.43,
+  "rear_shell": 42.01,
+  "tail": 5.25,
+  "lens": 1.9,
+  "wheel_l": 31.52,
+  "wheel_r": 31.52,
+  "oring_l": 4.03,
+  "oring_r": 4.03,
+  "motor_l": 9.5,
+  "encoder_l": 1.0,
+  "motor_r": 9.5,
+  "encoder_r": 1.0,
+  "battery": 45.0,
+  "batt_contacts": 1.0,
+  "main_pcb": 8.0,
+  "esp32s3": 3.0,
+  "drv8833": 0.2,
+  "imu": 0.1,
+  "amp": 0.1,
+  "charger": 0.3,
+  "mic": 0.1,
+  "fpc_conn": 0.4,
+  "display": 5.0,
+  "camera": 2.0,
+  "tof": 0.3,
+  "cliff_l": 0.2,
+  "cliff_r": 0.2,
+  "sensor_flex": 0.5,
+  "speaker": 3.0,
+  "touch_pad": 0.4,
+  "charge_pad_l": 0.2,
+  "charge_pad_r": 0.2,
+  "switch": 0.5,
+  "screw_0": 0.3,
+  "screw_1": 0.3,
+  "screw_2": 0.3,
+  "screw_3": 0.3
+ }
+}

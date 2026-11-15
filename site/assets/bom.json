@@ -1,0 +1,261 @@
+{
+ "volume_total": 28.88,
+ "proto_total": 56.41,
+ "checked": "2026-11-14",
+ "volume": [
+  {
+   "item": "ESP32-S3-WROOM-1-N8R8 module",
+   "qty": 1,
+   "unit": 3.48,
+   "status": "verified"
+  },
+  {
+   "item": "GC9A01 1.28\" round IPS 240x240 panel",
+   "qty": 1,
+   "unit": 1.86,
+   "status": "verified"
+  },
+  {
+   "item": "OV2640 2 MP camera, 120 deg, 24-pin FPC",
+   "qty": 1,
+   "unit": 2.4,
+   "status": "estimate"
+  },
+  {
+   "item": "N20 6 V 1:150 gear motor + 7 PPR hall encoder",
+   "qty": 2,
+   "unit": 1.9,
+   "status": "estimate"
+  },
+  {
+   "item": "DRV8833PWPR dual H-bridge",
+   "qty": 1,
+   "unit": 1.01,
+   "status": "verified"
+  },
+  {
+   "item": "QMI8658C 6-axis IMU",
+   "qty": 1,
+   "unit": 0.74,
+   "status": "verified"
+  },
+  {
+   "item": "VL53L0CXV0DH/1 time-of-flight sensor",
+   "qty": 1,
+   "unit": 1.62,
+   "status": "verified"
+  },
+  {
+   "item": "ITR8307 IR reflective cliff sensor",
+   "qty": 2,
+   "unit": 0.12,
+   "status": "estimate"
+  },
+  {
+   "item": "I2S MEMS microphone (MSM261S4030H0R class)",
+   "qty": 1,
+   "unit": 0.45,
+   "status": "estimate"
+  },
+  {
+   "item": "NS4168 I2S class-D amp",
+   "qty": 1,
+   "unit": 0.12,
+   "status": "estimate"
+  },
+  {
+   "item": "20 mm 8 ohm 1 W speaker",
+   "qty": 1,
+   "unit": 0.35,
+   "status": "estimate"
+  },
+  {
+   "item": "18650 2000 mAh grade-A Li-ion cell",
+   "qty": 1,
+   "unit": 1.05,
+   "status": "verified"
+  },
+  {
+   "item": "Charger + protection + 3.3 V buck (TP4056-class, DW01A, FS8205)",
+   "qty": 1,
+   "unit": 0.35,
+   "status": "estimate"
+  },
+  {
+   "item": "Main PCB 2-layer 62 x 44 mm + passives + connectors",
+   "qty": 1,
+   "unit": 1.4,
+   "status": "estimate"
+  },
+  {
+   "item": "SMT assembly + board test",
+   "qty": 1,
+   "unit": 1.2,
+   "status": "estimate"
+  },
+  {
+   "item": "Sensor flex (FPC) for ToF + cliff sensors",
+   "qty": 1,
+   "unit": 0.3,
+   "status": "estimate"
+  },
+  {
+   "item": "Molded plastics: face shell, drive shell, 2 wheels, IMD lens, TPU tail (145 g)",
+   "qty": 1,
+   "unit": 1.2,
+   "status": "estimate"
+  },
+  {
+   "item": "Stock O-ring 95 x 3.5 mm (tyre)",
+   "qty": 2,
+   "unit": 0.04,
+   "status": "estimate"
+  },
+  {
+   "item": "Touch foil, belly charge pads, cell contacts",
+   "qty": 1,
+   "unit": 0.15,
+   "status": "estimate"
+  },
+  {
+   "item": "M2 x 8 PT thread-forming screw",
+   "qty": 4,
+   "unit": 0.01,
+   "status": "estimate"
+  },
+  {
+   "item": "Dock: molded base + 2 pogo pins + USB-C board + fiducial label + feet",
+   "qty": 1,
+   "unit": 1.25,
+   "status": "estimate"
+  },
+  {
+   "item": "USB-A to USB-C cable (no wall adapter)",
+   "qty": 1,
+   "unit": 0.45,
+   "status": "estimate"
+  },
+  {
+   "item": "Retail box, pulp insert, quick-start card",
+   "qty": 1,
+   "unit": 0.9,
+   "status": "estimate"
+  },
+  {
+   "item": "Final assembly (~7 min) + end-of-line test",
+   "qty": 1,
+   "unit": 1.1,
+   "status": "estimate"
+  },
+  {
+   "item": "Tooling amortisation (~$60k of tools over 50k units)",
+   "qty": 1,
+   "unit": 1.2,
+   "status": "estimate"
+  },
+  {
+   "item": "Certification amortisation (FCC/CE/UN38.3 on a pre-certified module)",
+   "qty": 1,
+   "unit": 0.4,
+   "status": "estimate"
+  },
+  {
+   "item": "Contingency: 10% on every estimated line",
+   "qty": 1,
+   "unit": 1.74,
+   "status": "estimate"
+  }
+ ],
+ "proto": [
+  {
+   "item": "Seeed XIAO ESP32S3 Sense (ESP32-S3 + OV2640 camera + mic)",
+   "qty": 1,
+   "unit": 13.99,
+   "status": "verified"
+  },
+  {
+   "item": "1.28\" GC9A01 round LCD module",
+   "qty": 1,
+   "unit": 8.6,
+   "status": "verified"
+  },
+  {
+   "item": "N20 6 V encoder gear motor (150 rpm)",
+   "qty": 2,
+   "unit": 4.41,
+   "status": "verified"
+  },
+  {
+   "item": "DRV8833 breakout",
+   "qty": 1,
+   "unit": 1.5,
+   "status": "estimate"
+  },
+  {
+   "item": "VL53L0X ToF breakout",
+   "qty": 1,
+   "unit": 2.5,
+   "status": "estimate"
+  },
+  {
+   "item": "6-axis IMU breakout (QMI8658 / MPU-6050)",
+   "qty": 1,
+   "unit": 2.0,
+   "status": "estimate"
+  },
+  {
+   "item": "MAX98357A I2S amp breakout",
+   "qty": 1,
+   "unit": 2.0,
+   "status": "estimate"
+  },
+  {
+   "item": "20 mm speaker",
+   "qty": 1,
+   "unit": 1.5,
+   "status": "estimate"
+  },
+  {
+   "item": "18650 cell (name-brand) + TP4056 USB-C protected charger board",
+   "qty": 1,
+   "unit": 5.5,
+   "status": "estimate"
+  },
+  {
+   "item": "TCRT5000 / ITR8307 cliff sensors",
+   "qty": 2,
+   "unit": 0.5,
+   "status": "estimate"
+  },
+  {
+   "item": "PETG filament for shells, wheels, dock (~210 g)",
+   "qty": 1,
+   "unit": 4.2,
+   "status": "estimate"
+  },
+  {
+   "item": "TPU 85A-95A filament for the tail (~6 g)",
+   "qty": 1,
+   "unit": 0.3,
+   "status": "estimate"
+  },
+  {
+   "item": "Clear PETG / acrylic sheet for the lens",
+   "qty": 1,
+   "unit": 0.5,
+   "status": "estimate"
+  },
+  {
+   "item": "95 x 3.5 mm O-rings",
+   "qty": 2,
+   "unit": 0.5,
+   "status": "estimate"
+  },
+  {
+   "item": "Pogo pins, copper tape, M2 screws, wire, perfboard",
+   "qty": 1,
+   "unit": 3.0,
+   "status": "estimate"
+  }
+ ]
+}

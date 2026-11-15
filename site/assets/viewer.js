@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
+import {toCreasedNormals} from 'three/addons/utils/BufferGeometryUtils.js';
 
 const $ = id => document.getElementById(id);
 const el = $('viewer'), Q = new URLSearchParams(location.search);
@@ -16,8 +17,8 @@ const pm = new THREE.PMREMGenerator(r); scene.environment = pm.fromScene(new Roo
 const ctl = new OrbitControls(cam, r.domElement); ctl.enableDamping = true; ctl.minDistance = 120; ctl.maxDistance = 1800;
 
 // robot frame: x forward, y left, z up (mm) -> three (x, z, -y)
-const TGT = new THREE.Vector3(10, 46, 55);
-const VIEWS = {'34': [400, 215, -360], front: [600, 60, 0], side: [0, 80, -600], back: [-600, 100, 0], top: [0.1, 640, 0], bottom: [60, -500, -40]};
+const TGT = new THREE.Vector3(0, 46, 40);
+const VIEWS = {'34': [500, 270, -440], front: [600, 60, 0], side: [0, 80, -600], back: [-600, 100, 0], top: [0.1, 640, 0], bottom: [60, -500, -40]};
 const OFF = new THREE.Vector3(-55, 0, 0); // shift target so the model sits left of the right panel
 function setView(n) {
   const v = VIEWS[n] || VIEWS['34'];
@@ -76,7 +77,7 @@ Promise.all([fetch('assets/robot_info.json').then(r => r.json()), fetch('assets/
     const meshes = []; o.traverse(m => { if (m.isMesh) meshes.push(m); });
     p.key = k;
     for (const m of meshes) {
-      m.geometry.computeVertexNormals();
+      m.geometry = toCreasedNormals(m.geometry, Math.PI / 7);
       m.material = material(p); m.castShadow = !p.key.startsWith('lens'); m.receiveShadow = true; m.userData.key = k;
       m.userData.baseOpacity = m.material.opacity;
     }

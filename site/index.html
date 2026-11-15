@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bobbin: the $99 pet robot that rolls on its own sides</title>
+<meta name="description" content="Bobbin is an autonomous home pet robot under $99: a spool-shaped body hanging between two big wheels. Interactive 3D CAD viewer with every component, layers, labels, X-ray and exploded view.">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect x=%224%22 y=%224%22 width=%226%22 height=%2224%22 rx=%223%22 fill=%22%23d4663f%22/%3E%3Crect x=%2222%22 y=%224%22 width=%226%22 height=%2224%22 rx=%223%22 fill=%22%23d4663f%22/%3E%3Crect x=%229%22 y=%229%22 width=%2214%22 height=%2214%22 rx=%225%22 fill=%22%23efe7da%22/%3E%3C/svg%3E">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+</head>
+<body>
+<div id="viewer"><div id="labels"></div><div id="loading">Loading Bobbin&hellip;</div></div>
+
+<header class="top">
+  <div class="brand"><span class="logo"><i></i><b></b><i></i></span><strong>Bobbin</strong><span class="ver">design v0.1 &middot; CAD model</span></div>
+  <p class="tag">A pet robot that rolls on its own sides. One eye, one camera, two motors, four screws, under $99.</p>
+</header>
+
+<aside class="panel left">
+  <h3>View</h3>
+  <div class="btns" id="views">
+    <button data-view="34">3/4</button><button data-view="front">Front</button><button data-view="side">Side</button>
+    <button data-view="back">Back</button><button data-view="top">Top</button><button data-view="bottom">Under</button>
+  </div>
+  <h3>Display</h3>
+  <div class="btns">
+    <button id="xray">X-ray</button><button id="lbls" class="on">Labels</button><button id="demo">Roll + nod</button>
+  </div>
+  <label class="slider">Explode <input id="explode" type="range" min="0" max="1" step="0.01" value="0"></label>
+  <h3>Layers</h3>
+  <div id="layers"></div>
+  <div class="stats" id="stats"></div>
+</aside>
+
+<aside class="panel right">
+  <nav class="tabs" id="tabs">
+    <button data-tab="parts" class="on">Parts</button><button data-tab="concept">Concept</button>
+    <button data-tab="bom">BOM</button><button data-tab="build">Build</button>
+  </nav>
+  <section id="tab-parts" class="tab on"><div class="hint">Click any part in 3D or below.</div><div id="clist"></div></section>
+  <section id="tab-concept" class="tab">
+    <h4>The idea</h4>
+    <p>Bobbin is a spool. The body is the core and the two big wheels are the flanges, so the wheels <em>are</em> the sides of the robot. The battery hangs below the axle like a pendulum, which keeps the face upright and lets Bobbin nod, lean, wobble and "look up" at you using only its two drive motors. A soft tail is the third foot.</p>
+    <h4>Why it wins</h4>
+    <ul>
+      <li><b>Cheapest possible motion:</b> 2 motors do driving, turning, nodding and leaning. No servos, no head joint.</li>
+      <li><b>Fewest parts:</b> 6 molded tools, 7 plastic parts, 4 screws, 1 circuit board.</li>
+      <li><b>Hard to break:</b> the big wheels are bumpers on every side; it can bump walls, chair legs and the cat.</li>
+      <li><b>A real character:</b> a round eye screen plus body language you can't get from a box on wheels.</li>
+      <li><b>Useful, not just cute:</b> it's a roaming camera and microphone on your Wi-Fi.</li>
+    </ul>
+    <h4>What it does</h4>
+    <ul>
+      <li><b>Home patrol:</b> roams while you're out and sends a snapshot when it sees a person, a pet, or hears a smoke alarm, glass or barking.</li>
+      <li><b>Pet sitter:</b> finds the dog or cat, plays chase, and shows you how they're doing.</li>
+      <li><b>Follow + greet:</b> meets you at the door and follows you room to room.</li>
+      <li><b>Timers, reminders, clock:</b> on its eye, said out loud, and it comes to find you.</li>
+      <li><b>Self-docking:</b> finds its dock by the printed marker and charges itself.</li>
+      <li><b>Pet it:</b> a touch pad in the crown makes it purr, wiggle and blink.</li>
+    </ul>
+  </section>
+  <section id="tab-bom" class="tab"><div id="bom"></div></section>
+  <section id="tab-build" class="tab">
+    <h4>Assembly (about 7 minutes)</h4>
+    <ol>
+      <li>Snap the cell into the drive-shell cradle and drop both motors into their rib saddles, shafts through the side holes.</li>
+      <li>Press the TPU tail anchor into its slot from the inside. Glue the speaker over the grille.</li>
+      <li>Slide the tested main board into the face-shell rails. Seat the eye screen, the camera and the sensor flex.</li>
+      <li>Plug in the motor, cell and speaker leads, close the two shells and drive 4 M2 screws from the back.</li>
+      <li>Press a wheel onto each D-shaft, roll an O-ring into each groove. Done; it flashes over the air.</li>
+    </ol>
+    <h4>Design for molding</h4>
+    <ul>
+      <li>Body splits at the axle plane: both shells pull straight back, no side actions.</li>
+      <li>2.0 mm nominal walls, ribs at 0.8 x wall, 1.5&deg; draft on all pulled faces.</li>
+      <li>One wheel tool makes both wheels: the right one is the same part turned around.</li>
+      <li>The lens is in-mold decorated so one clear part makes the eye and mouth windows.</li>
+      <li>Every 3D-printable version is the same CAD; print shells face-down, wheels flat.</li>
+    </ul>
+    <p class="small">Full notes: <a href="https://github.com/wjb000/bobbin-spoolbot/blob/main/DFM.md">DFM.md</a> &middot; <a href="https://github.com/wjb000/bobbin-spoolbot/blob/main/BOM.md">BOM.md</a> &middot; <a href="https://github.com/wjb000/bobbin-spoolbot/tree/main/cad">CAD (STEP + STL)</a></p>
+  </section>
+</aside>
+
+<div id="info" class="info hidden"><button id="info-x" aria-label="close">&times;</button><b id="info-t"></b><span id="info-k"></span><p id="info-d"></p><div id="info-m"></div></div>
+<footer class="note">Design model for review: not built or tested yet. Bought parts are modelled from datasheet dimensions.
+  <a href="https://github.com/wjb000/bobbin-spoolbot">Source &amp; CAD on GitHub</a></footer>
+<script type="module" src="assets/viewer.js"></script>
+</body>
+</html>
